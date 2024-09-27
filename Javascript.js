@@ -1,5 +1,6 @@
 // hide when btn click
 // common function 
+let flag=1;
 function hideById(id){
     document.getElementById('historyDiv').classList.add('hidden');
     document.getElementById('3-cards').classList.add('hidden');
@@ -27,18 +28,19 @@ document.getElementById('history-btn').addEventListener('click',function(){
 // Amount add
     // common function 
     function add(amountAtm,disAmtfunc){
-        
+        flag=1;
+
         let currentAmt= parseFloat(document.getElementById('currentAmthtml').innerText);
             
         const amount=parseFloat(document.getElementById(amountAtm).value);
 
         const disAmt=parseFloat(document.getElementById(disAmtfunc).innerText);
 
-            if(amount>0 && typeof(amount)==typeof(4)){
-                if(currentAmt<=0){
-                    alert("You don't have enough money");
-                    return;
-                }
+        if(amount>0 && typeof(amount)==typeof(4)){
+            if(currentAmt<=amount){
+                alert("You don't have enough money");
+                return;
+            }
 
             document.getElementById('my_modal_1').showModal();
             let addAmt=amount+disAmt;
@@ -47,7 +49,7 @@ document.getElementById('history-btn').addEventListener('click',function(){
             document.getElementById('currentAmthtml').innerText=myCurrAmt;
 
             document.getElementById(disAmtfunc).innerText=addAmt;
-            
+            flag=100;
         }
         else{
             alert("Not a valid amount");
@@ -79,8 +81,8 @@ document.getElementById('history-btn').addEventListener('click',function(){
 // history
 // common function 
 function historyH(head,amountAtm){
-    
-    const amount=parseFloat(document.getElementById(amountAtm).value);
+    if(flag==100){
+        const amount=parseFloat(document.getElementById(amountAtm).value);
     const heading=document.getElementById(head).innerText;
     const div=document.createElement('div');
     div.innerHTML=`
@@ -90,4 +92,6 @@ function historyH(head,amountAtm){
         </div>
     `
     document.getElementById('historyDiv').appendChild(div);
+    }
 }
+console.log(flag);

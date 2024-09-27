@@ -19,8 +19,8 @@
           </style>
 </head>
 <body class="main-font">
-    <header class="sticky top-0 left-0 right-0 backdrop-blur-lg pb-3">
-        <div class="bg-[#f9f7f3] py-3 backdrop-blur-lg ">
+    <header class="sticky top-0 left-0 right-0 backdrop-blur-lg  z-10">
+        <div class="bg-[#f9f7f3ba] py-3 backdrop-blur-lg ">
             <div class=" flex justify-around ">
 
                 <div class="">
@@ -49,14 +49,14 @@
         <!-- donate and history btn  -->
         
     </header>
-    <main class="lg:mx-[9.37rem] mx-4">
+    <main class="lg:mx-[9.37rem] mx-4 z-0">
         <h1 class="text-2xl my-4 font-bold">Important FAQ</h1>
 
         <div class="collapse collapse-arrow bg-base-200 mb-3">
             <input type="checkbox" name="my-accordion-2"  />
             <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p class="text-sm text-[#585858]">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page as a tree of objects, where each node corresponds to an element, attribute, or text in the HTML or XML document. The DOM allows developers to access, modify, add, or delete elements and content dynamically using languages like JavaScript.</p>
             </div>
           </div>
 
@@ -64,7 +64,9 @@
             <input type="checkbox" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
             <div class="collapse-content">
-              <p>hello</p>
+                <p class="text-sm text-[#585858]">You can select an element from the DOM using methods like:
+                <br> 1. getElementById(): Selects an element by its id.<br>2. getElementsByClassName(): Selects elements by their class name.<br>3. getElementsByTagName(): Selects elements by their tag name.<br>4. querySelector(): Selects the first element that matches a CSS selector.<br>5. querySelectorAll(): Selects all elements that match a CSS selector.</p>
+
             </div>
           </div>
 
@@ -74,15 +76,30 @@
             <input type="checkbox" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p class="text-sm text-[#585858]">Event delegation is a technique in the DOM where a single event listener is attached to a parent element to manage events on its child elements. Instead of adding separate event listeners to each child, the parent captures events as they bubble up from children. <br><br>
+
+                This approach is useful because: <br><br>
+                
+                1. It improves performance by reducing the number of event listeners. <br>
+                2. It handles dynamically added elements automatically. <br>
+                3. It simplifies code, especially for many similar elements.</p>
             </div>
           </div>
 
           <div class="collapse collapse-arrow bg-base-200 mb-3">
-            <input type="checkbox" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <input type="checkbox" name="my-accordion-2"  />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p class="text-sm text-[#585858]">To manipulate an element's attributes and styles using the DOM: <br><br>
+
+                Attributes:<br><br>
+                1. Use setAttribute() to modify or add an attribute. <br>
+                2. Use getAttribute() to retrieve an attribute's value. <br>
+                3. Use removeAttribute() to remove an attribute.<br><br>
+                Styles:<br><br>
+                1. Use the style property to modify CSS styles directly.<br>
+                2. You can also toggle CSS classes using classList methods like add(), remove(), or toggle().
+            </p>
             </div>
           </div>
 
