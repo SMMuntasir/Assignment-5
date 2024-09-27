@@ -49,6 +49,7 @@ document.getElementById('history-btn').addEventListener('click',function(){
             document.getElementById('currentAmthtml').innerText=myCurrAmt;
 
             document.getElementById(disAmtfunc).innerText=addAmt;
+            
             flag=100;
         }
         else{
@@ -92,6 +93,7 @@ function historyH(head,amountAtm){
         </div>
     `
     document.getElementById('historyDiv').appendChild(div);
+    document.getElementById(amountAtm).value='';
     }
 }
 console.log(flag);
