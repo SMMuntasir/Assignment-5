@@ -20,26 +20,28 @@
 </head>
 <body class="main-font">
     <!-- header  -->
-    <header class="sticky top-0 left-0 right-0 backdrop-blur-lg">
-        <div>
-            <div class="navbar bg-base-100">
+    <header class="sticky top-0 left-0 right-0 backdrop-blur-lg pb-3">
+        <div class="bg-[#f9f7f3] py-3 backdrop-blur-lg ">
+            <div class=" flex justify-around md:mx-0 mx-4">
 
-                <div class="navbar-start">
+                <div class="">
                     
                     <a href="blog.html" class="btn">Blog</a>
                   </div>
 
                 
                 <!-- delet  -->
-                <div class="navbar-center hidden lg:flex">
-                 <img src="assets/logo.png" alt="">
+                <div class="flex items-center gap-2">
+                 <img class="size-10" src="assets/logo.png" alt="">
                  <p>Donate Bangladesh</p>
                 </div>
                 <!-- delete -->
-                <div class="navbar-end"></div>
-                  <img src="assets/coin.png" alt="">
-                  <p>5500 </p>
-                  <p>BDT</p>
+                
+                <div class=" flex w-fit py-1 px-2 rounded-md mb-3 gap-1 items-center">
+                    <img class="size-5" src="assets/coin.png" alt="">
+                    <p id="currentAmthtml">10000</p>
+                    BDT</img>
+                </div>
                 </div>
 
               </div>
@@ -47,7 +49,7 @@
         <!-- donate header end -->
 
         <!-- donate and history btn  -->
-        <div class="flex justify-center gap-3">
+        <div class="flex justify-center gap-3 mt-4">
             <button id="donate-btn" class="btn " >Donate</button>
             <button id="history-btn" class="btn ">History</button>
         </div>
@@ -62,16 +64,16 @@
                 <div class="flex flex-col ">
                     <div class="bg-[#11111111] flex w-fit py-1 px-2 rounded-md mb-3 gap-1 items-center">
                         <img class="size-5" src="assets/coin.png" alt="">
-                        <p>0</p>
+                        <p id="disAmtNoakhali">0</p>
                         BDT</img>
                     </div>
                     <h2 class="font-bold mb-3 text-lg">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="mb-3 text-sm text-[#585858a6]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     <textarea placeholder="Write Donation Amount" class="border-2  mb-3  flex items-center 
                     py-2 px-4 h-12  
-                    border-gray-300 rounded-md" name="" id=""></textarea>
+                    border-gray-300 rounded-md" name="" id="noakhali-text"></textarea>
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn bg-[#b4f461] font-bold text-lg" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <button id="noakhali-donate" class="btn bg-[#b4f461] font-bold text-lg">Donate Now</button>
                     <dialog id="my_modal_1" class="modal">
                     <div class="modal-box text-center lg:w-96">
                         <h3 class="text-lg font-bold">Congrates!</h3>
@@ -93,16 +95,16 @@
                 <div class="flex flex-col ">
                     <div class="bg-[#11111111] flex w-fit py-1 px-2 rounded-md mb-3 gap-1 items-center">
                         <img class="size-5" src="assets/coin.png" alt="">
-                        <p>0</p>
+                        <p id="disAmtFeni" >0</p>
                         BDT</img>
                     </div>
                     <h2 class="font-bold mb-3 text-lg">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="mb-3 text-sm text-[#585858a6]">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                     <textarea placeholder="Write Donation Amount" class="border-2  mb-3  flex items-center 
                     py-2 px-4 h-12  
-                    border-gray-300 rounded-md" name="" id=""></textarea>
+                    border-gray-300 rounded-md" name="" id="feni-text"></textarea>
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn bg-[#b4f461] font-bold text-lg" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <button id="feni-donate" class="btn bg-[#b4f461] font-bold text-lg" >Donate Now</button>
                     
                 </div>
             </div>
@@ -112,16 +114,16 @@
                 <div class="flex flex-col ">
                     <div class="bg-[#11111111] flex w-fit py-1 px-2 rounded-md mb-3 gap-1 items-center">
                         <img class="size-5" src="assets/coin.png" alt="">
-                        <p>0</p>
+                        <p id="disAmtQuota" >0</p>
                         BDT</img>
                     </div>
                     <h2 class="font-bold mb-3 text-lg">Aid for Injured in the Quota Movement</h2>
                     <p class="mb-3 text-sm text-[#585858a6]">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                     <textarea placeholder="Write Donation Amount" class="border-2  mb-3  flex items-center 
                     py-2 px-4 h-12  
-                    border-gray-300 rounded-md" name="" id=""></textarea>
+                    border-gray-300 rounded-md" name="" id="quota-text"></textarea>
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn bg-[#b4f461] font-bold text-lg" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <button id="quota-donate" class="btn bg-[#b4f461] font-bold text-lg">Donate Now</button>
                     
                 </div>
             </div>
@@ -130,7 +132,7 @@
         <!-- div of the 3 cards end -->
 
          <!-- history -->
-          <div class="" id="historyDiv">
+          <div class="hidden" id="historyDiv">
             <h1>Love UUUU</h1>
           </div>
           <!-- history end  -->
