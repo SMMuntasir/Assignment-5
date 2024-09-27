@@ -26,16 +26,16 @@
 
                 <div class="">
                     
-                    <a href="blog.html" class="btn">Blog</a>
+                    <a href="blog.html" class="btn bg-[#b4f461]">Blog</a>
                   </div>
 
                 
                 <!-- delet  -->
                 <div class="flex items-center gap-2">
                  <img class="size-10" src="assets/logo.png" alt="">
-                 <p>Donate Bangladesh</p>
+                 <p class="font-bold">Donate Bangladesh</p>
                 </div>
-                <!-- delete -->
+                
                 
                 <div class=" flex w-fit py-1 px-2 rounded-md mb-3 gap-1 items-center">
                     <img class="size-5" src="assets/coin.png" alt="">
@@ -50,8 +50,8 @@
 
         <!-- donate and history btn  -->
         <div class="flex justify-center gap-3 mt-4">
-            <button id="donate-btn" class="btn " >Donate</button>
-            <button id="history-btn" class="btn ">History</button>
+            <button id="donate-btn" class="btn hover:bg-[#b4f461]" >Donate</button>
+            <button id="history-btn" class="btn hover:bg-[#b4f461]">History</button>
         </div>
     </header>
     
@@ -67,26 +67,14 @@
                         <p id="disAmtNoakhali">0</p>
                         BDT</img>
                     </div>
-                    <h2 class="font-bold mb-3 text-lg">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <h2 id="NoakhaliHead" class="font-bold mb-3 text-lg">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="mb-3 text-sm text-[#585858a6]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     <textarea placeholder="Write Donation Amount" class="border-2  mb-3  flex items-center 
                     py-2 px-4 h-12  
                     border-gray-300 rounded-md" name="" id="noakhali-text"></textarea>
                     <!-- Open the modal using ID.showModal() method -->
                     <button id="noakhali-donate" class="btn bg-[#b4f461] font-bold text-lg">Donate Now</button>
-                    <dialog id="my_modal_1" class="modal">
-                    <div class="modal-box text-center lg:w-96">
-                        <h3 class="text-lg font-bold">Congrates!</h3>
-                        <img class="mx-auto" src="assets/coin.png" alt="">
-                        <p class="py-4">Press ESC key or click the button below to close</p>
-                        <div class="modal-action flex justify-center">
-                        <form  method="dialog" >
-                            <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn ">close confirmation</button>
-                        </form>
-                        </div>
-                    </div>
-                    </dialog>
+                    
                 </div>
             </div>
             <!-- card2 -->
@@ -98,7 +86,7 @@
                         <p id="disAmtFeni" >0</p>
                         BDT</img>
                     </div>
-                    <h2 class="font-bold mb-3 text-lg">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <h2 id="FeniHead" class="font-bold mb-3 text-lg">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="mb-3 text-sm text-[#585858a6]">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                     <textarea placeholder="Write Donation Amount" class="border-2  mb-3  flex items-center 
                     py-2 px-4 h-12  
@@ -117,7 +105,7 @@
                         <p id="disAmtQuota" >0</p>
                         BDT</img>
                     </div>
-                    <h2 class="font-bold mb-3 text-lg">Aid for Injured in the Quota Movement</h2>
+                    <h2 id="QuotaHead" class="font-bold mb-3 text-lg">Aid for Injured in the Quota Movement</h2>
                     <p class="mb-3 text-sm text-[#585858a6]">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                     <textarea placeholder="Write Donation Amount" class="border-2  mb-3  flex items-center 
                     py-2 px-4 h-12  
@@ -130,10 +118,25 @@
             <!-- card3 end  -->
          </div>
         <!-- div of the 3 cards end -->
-
+         <!-- dialogue -->
+         <dialog id="my_modal_1" class="modal">
+            <div class="modal-box text-center lg:w-96">
+                <h3 class="md:text-2xl text-lg font-bold">Congrates!</h3>
+                <img class="mx-auto mt-3" src="assets/coin.png" alt="">
+                <p class="py-4">You Have Donated For Humankind</p>
+                <h3 class="font-bold">Successfully</h3>
+                <div class="modal-action flex justify-center">
+                <form  method="dialog" >
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn ">close confirmation</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
+          <!-- dialogue end -->
          <!-- history -->
           <div class="hidden" id="historyDiv">
-            <h1>Love UUUU</h1>
+            
           </div>
           <!-- history end  -->
 

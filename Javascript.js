@@ -47,7 +47,7 @@ document.getElementById('history-btn').addEventListener('click',function(){
             document.getElementById('currentAmthtml').innerText=myCurrAmt;
 
             document.getElementById(disAmtfunc).innerText=addAmt;
-            return addAmt;
+            
         }
         else{
             alert("Not a valid amount");
@@ -58,20 +58,36 @@ document.getElementById('history-btn').addEventListener('click',function(){
     document.getElementById('noakhali-donate').addEventListener('click',function(event){
         event.preventDefault();
         add('noakhali-text','disAmtNoakhali');
+        historyH('NoakhaliHead','noakhali-text');
     })
 
     // feni
     document.getElementById('feni-donate').addEventListener('click',function(event){
         event.preventDefault();
         add('feni-text','disAmtFeni');
+        historyH('FeniHead','feni-text');
     })
 
     // quota 
     document.getElementById('quota-donate').addEventListener('click',function(event){
         event.preventDefault();
         add('quota-text','disAmtQuota');
+        historyH('QuotaHead','quota-text');
     })
 // Amount add end
 
 // history
-
+// common function 
+function historyH(head,amountAtm){
+    
+    const amount=parseFloat(document.getElementById(amountAtm).value);
+    const heading=document.getElementById(head).innerText;
+    const div=document.createElement('div');
+    div.innerHTML=`
+        <div class=" border-2 border-[#eaeaea] p-5 rounded-2xl mb-5">
+            <p class="mb-2 font-bold" >${amount} Taka is ${heading}</p>
+            <p class="text-sm text-[#585858a6]">${Date()}</p>
+        </div>
+    `
+    document.getElementById('historyDiv').appendChild(div);
+}
